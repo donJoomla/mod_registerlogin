@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="2.5" method="upgrade">
+	<name>Login/Register</name>
+	<author>Adam Bouqdib - ABE Media</author>
+	<creationDate>November 2013</creationDate>
+	<authorEmail>info@abemedia.co.uk</authorEmail>
+	<authorUrl>www.abemedia.co.uk</authorUrl>
+	<version>1.1</version>
+	<description>Login Register Module</description>
+	<files>
+		<filename module="mod_registerlogin">mod_registerlogin.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="return" type="text" label="Return URL" description="Choose which page to return to after login/register. Leave blank for current URL" />
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Add a suffix to the module (if you need to) which will allow individual css styling" />
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
