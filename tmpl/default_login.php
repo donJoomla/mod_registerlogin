@@ -2,9 +2,9 @@
   <div class="modal-body">
     <fieldset class="well">
     <?php 
-	foreach ($login->getFieldset('credentials') as $field) {
-    	if(!$field->hidden && $field->type != 'Spacer') $login->setFieldAttribute(str_replace('jform_','',$field->id),'class','form-control '.$field->class);
-	} 
+    foreach ($login->getFieldset('credentials') as $field) {
+        if(!$field->hidden && $field->type != 'Spacer') $login->setFieldAttribute(str_replace('jform_','',$field->id),'class','form-control '.$field->class);
+    } 
 	?>
       <?php foreach ($login->getFieldset('credentials') as $field) : ?>
       <?php if ($field->name=='username' || $field->name=='password') : ?>
