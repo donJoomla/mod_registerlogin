@@ -19,7 +19,7 @@
       <?php echo $field->input;?>
       <?php else:?>
       <div class="form-group">
-        <div class="col-sm-4"> <?php echo $field->label; ?>
+        <div class="col-sm-4 control-label"> <?php echo $field->label; ?>
           <?php if (!$field->required && $field->type != 'Spacer') : ?>
           <!--span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL'); ?></span-->
           <?php endif; ?>

@@ -9,14 +9,14 @@
       <?php if ($field->name=='username' || $field->name=='password') : ?>
       <?php if ($field->name=='password') $ucheck = true; ?>
       <div class="form-group">
-        <div class="col-sm-4"> <?php echo $field->label; ?></div>
+        <div class="col-sm-4 control-label"> <?php echo $field->label; ?></div>
         <div class="col-sm-7 input-group"> <?php echo $field->input; ?>
           <a class="input-group-addon" title="<?php echo JText::_('COM_USERS_LOGIN_'.($ucheck?'RESET':'REMIND')); ?>" href="<?php echo JRoute::_('index.php?option=com_users&view='.($ucheck?'reset':'remind')); ?>"><i class="icon-question-sign muted"></i></a>
         </div>
       </div>
       <?php elseif (!$field->hidden) : ?>
       <div class="form-group">
-        <div class="col-sm-4"> <?php echo $field->label; ?></div>
+        <div class="col-sm-4 control-label"> <?php echo $field->label; ?></div>
         <div class="col-sm-8"> <?php echo $field->input; ?></div>
       </div>
       <?php endif; ?>
@@ -24,7 +24,7 @@
       <?php $tfa = JPluginHelper::getPlugin('twofactorauth'); ?>
       <?php if (!is_null($tfa) && $tfa != array()): ?>
       <div class="form-group">
-        <div class="col-sm-4"> <?php echo $this->form->getField('secretkey')->label; ?></div>
+        <div class="col-sm-4 control-label"> <?php echo $this->form->getField('secretkey')->label; ?></div>
         <div class="col-sm-8"> <?php echo $this->form->getField('secretkey')->input; ?></div>
       </div>
       <?php endif; ?>
